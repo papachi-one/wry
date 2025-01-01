@@ -1801,7 +1801,7 @@ impl WebViewExtWindows for WebView {
     self.webview.controller.clone()
   }
 
-  fn environemnt(&self) -> ICoreWebView2Environment {
+  fn environment(&self) -> ICoreWebView2Environment {
     self.webview.env.clone()
   }
 
