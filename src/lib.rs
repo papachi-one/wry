@@ -243,6 +243,7 @@ pub use self::webview2::ScrollBarStyle;
 use self::webview2::*;
 #[cfg(target_os = "windows")]
 use webview2_com::Microsoft::Web::WebView2::Win32::ICoreWebView2Controller;
+use webview2_com::Microsoft::Web::WebView2::Win32::ICoreWebView2Environment;
 
 use std::{borrow::Cow, collections::HashMap, path::PathBuf, rc::Rc};
 
@@ -1769,6 +1770,7 @@ pub trait WebViewExtWindows {
   /// Returns WebView2 Controller
   fn controller(&self) -> ICoreWebView2Controller;
 
+  fn environment(@self -> ICoreWebView2Environemnt;
   /// Changes the webview2 theme.
   ///
   /// Requires WebView2 Runtime version 101.0.1210.39 or higher, returns error on older versions,
@@ -1797,6 +1799,10 @@ pub trait WebViewExtWindows {
 impl WebViewExtWindows for WebView {
   fn controller(&self) -> ICoreWebView2Controller {
     self.webview.controller.clone()
+  }
+
+  fn environemnt(&self) -> ICoreWebView2Environment {
+    self.webview.env.clone()
   }
 
   fn set_theme(&self, theme: Theme) -> Result<()> {
