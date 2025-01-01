@@ -1,15 +1,14 @@
 workspace = {}
 
 [package]
-name = "wry"
-version = "0.47.2"
+name = "wry-one"
+version = "1.47.2"
 authors = ["Tauri Programme within The Commons Conservancy"]
 edition = "2021"
 license = "Apache-2.0 OR MIT"
 description = "Cross-platform WebView rendering library"
 readme = "README.md"
-repository = "https://github.com/tauri-apps/wry"
-documentation = "https://docs.rs/wry"
+repository = "https://github.com/papachi-one/wry"
 categories = ["gui"]
 exclude = ["/.changes", "/.github", "/audits", "/wry-logo.svg"]
 
