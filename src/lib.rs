@@ -1770,7 +1770,7 @@ pub trait WebViewExtWindows {
   /// Returns WebView2 Controller
   fn controller(&self) -> ICoreWebView2Controller;
 
-  fn environment(@self -> ICoreWebView2Environemnt;
+  fn environment(&self) -> ICoreWebView2Environemnt;
   /// Changes the webview2 theme.
   ///
   /// Requires WebView2 Runtime version 101.0.1210.39 or higher, returns error on older versions,
